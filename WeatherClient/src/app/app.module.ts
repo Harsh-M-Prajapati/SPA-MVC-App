@@ -11,6 +11,8 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { LoginComponent} from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { HomeComponent2 } from './Home2/home2.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { RegisterComponent } from './register/register.component';
     CounterComponent,
     FetchDataComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomeComponent2
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -31,7 +34,8 @@ import { RegisterComponent } from './register/register.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'Login', component: LoginComponent },
-      { path: 'Register', component: RegisterComponent }
+      { path: 'Register', component: RegisterComponent },
+      { path: 'Home2', component: HomeComponent2 }
 
     ])
   ],
