@@ -58,15 +58,15 @@ namespace WeatherAPI4.Controllers
 
         [HttpPost]
         [Route("Create")]
-        public async Task<IActionResult> Create(string UserName, string Password)
+        public async Task<IActionResult> Create(UserDto userDto)
         {
             ApplicationUser user = new()
             {
-                UserName = UserName,
-                Email = $"{UserName}@gmail.com",
+                UserName = userDto.UserName,
+                Email = $"{userDto.UserName}@gmail.com",
                 EmailConfirmed = true
             };
-            IdentityResult result = await _userManager.CreateAsync(user, Password);
+            IdentityResult result = await _userManager.CreateAsync(user, userDto.Password);
             return Ok(result); 
         }
     }
